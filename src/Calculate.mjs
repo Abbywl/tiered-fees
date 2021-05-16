@@ -50,7 +50,7 @@ function adjustTierFee(fees)
   else { return "$" + parseFloat(fees).toFixed(2).toString() ; }
 }
 
-export function calculateFees(values, p)
+export function computeFees(values, p)
 { //returns string containing the fee amount or error message
   //called by handleCalculateFees
   if(p === "")

@@ -8,7 +8,7 @@ import AddIcon from '@material-ui/icons/Add';
 import Icon from '@material-ui/core/Icon';
 import { Typography } from '@material-ui/core';
 import{ makeStyles } from '@material-ui/core/styles';
-import { calculateFees } from './Calculate.mjs';
+import { computeFees } from './Calculate.mjs';
 import { areTiersValid } from './Calculate.mjs';
 import { dollarInputValid } from './Calculate.mjs';
 
@@ -89,11 +89,11 @@ function App() {
      { setPrice(event.target.value); }
   }
 
-  const handleCalculateFees = (event) => {
+  const handleComputeFees = (event) => {
     const tierStatus = areTiersValid([...inputFields]);
     if(tierStatus.valid)
     {
-      console.log(calculateFees( [...inputFields], price));
+      console.log(computeFees( [...inputFields], price));
     }
   }
   
@@ -228,8 +228,8 @@ function App() {
           variant= "contained"
           color = "primary"
           type = "submit" 
-          onClick={handleCalculateFees}>
-          Calculate Fees
+          onClick={handleComputeFees}>
+          Compute Fees
         </Button>
 
         </form>
