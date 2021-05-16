@@ -35,9 +35,9 @@ function toCents(dollars)
     if(dollarArr[1] === "")
     { cents = 0;}
     else { cents = parseInt(dollarArr[1]); }
-    console.log("dollars: " + dollars);
-    console.log("dollarCents: " + dollarCents);
-    console.log("cents: " + cents);
+    //console.log("dollars: " + dollars);
+    //console.log("dollarCents: " + dollarCents);
+    //console.log("cents: " + cents);
     return dollarCents + cents;
   }
   return Math.floor(parseFloat(dollars) * 100);
@@ -100,9 +100,9 @@ export function areTiersValid(values)
     }
     else if(toCents(tier.upperBound) !==  toCents(nextTier.lowerBound)- 1) 
     {
-      console.log( "lower tier upper bound: " + toCents(tier.upperBound));
-      console.log( "upper tier lower bound: " + toCents(nextTier.lowerBound));
-      console.log("upper tier lower bound minus one  " + (toCents(nextTier.lowerBound)- 1));
+      //console.log( "lower tier upper bound: " + toCents(tier.upperBound));
+      //console.log( "upper tier lower bound: " + toCents(nextTier.lowerBound));
+      //console.log("upper tier lower bound minus one  " + (toCents(nextTier.lowerBound)- 1));
 
       const m = "Tiers are not valid. Tier " + i + " has upper bound " + tier.upperBound +
       " while Tier " + (i+1) + " has lower bound " + nextTier.lowerBound + 
